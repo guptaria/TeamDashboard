@@ -4,11 +4,18 @@ const Employee = require("./Employee");
 
 
 
-class Engineer extends Employee{
-    constructor(name,role,id,email,github){
-        super(name,role,id,email);
-        this.github=github;
+class Engineer extends Employee {
+    constructor(name, role, id, email, github) {
+        super(name, role, id, email);
+        this.github = github;
     }
+    getRole() {
+        return "Engineer";
+    }
+    getGithub() {
+        this.github = github;
+    }
+
 }
 
 //if github is not string or empty, throw error
