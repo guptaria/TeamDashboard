@@ -8,27 +8,26 @@ class Employee {
 
     }
     getName() {
-        this.name = name;
-
+        return this.name;
     }
     getRole() {
         return "Employee";
     }
 
     getId() {
-        this.id = id;
+        return this.id;
 
     }
     getEmail() {
-        this.email = email;
+        return this.email;
 
     }
 
 }
 
-module.exports = Employee;
 
-// 
+
+// id array
 
 // if name is not a string throw error
 // if role is empty or not string , throw error
@@ -48,3 +47,6 @@ module.exports = Employee;
 // {
 //     throw new Error("Email should be a non-empty string");
 // }
+
+
+module.exports = Employee;

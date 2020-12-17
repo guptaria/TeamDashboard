@@ -1,0 +1,18 @@
+/* giving background color to the document heading */
+.jumbotron{
+    background-color:lightseagreen;
+}
+/* Giving margin in between the employee cards */
+.card{
+    margin:10px;
+}
+/*  */
+.card-header{
+    background-color:lightgray;
+}
+/* giving border to the employee cards */
+.employee-card{
+    border-color:blue;
+    border: solid;
+    border-radius:2px;
+}

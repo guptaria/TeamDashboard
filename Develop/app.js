@@ -23,18 +23,19 @@ const teamMembers = [];
 //inquirer to ask manager info questions
 inquirer.prompt(questions.managerQuestions)
   .then(answers => {
+    //creating manager's object
+    const manager = new Manager(answers.name, answers.role, answers.id, answers.email, answers.officeNumber);
+    teamMembers.push(manager);
+    // console.log(teamMembers);
     if (answers.addmore === "Engineer") {
       addEngineer();
     } else if (answers.addmore === "Intern") {
       addIntern();
     } else {
       console.log("No-one else to add!");
-      render(teamMembers);
+      renderTeam();
     }
-    //creating manager's object
-    const manager = new Manager(answers.name, answers.role, answers.id, answers.email, answers.officeNumber);
-    teamMembers.push(manager);
-    // console.log(teamMembers);
+
 
   })
   .catch(error => {
@@ -47,17 +48,18 @@ function addEngineer() {
   inquirer
     .prompt(questions.engineerQuestions)
     .then(answers => {
+      const engineer = new Engineer(answers.name, answers.role, answers.id, answers.email, answers.github);      //creating engineer object
+      teamMembers.push(engineer);
+      // console.log(teamMembers);
       if (answers.addmore === "Engineer") {
         addEngineer();     //recursive function
       } else if (answers.addmore === "Intern") {
         addIntern();
       } else {
         console.log("No-one else to add!");
-        render(teamMembers);
+        renderTeam();
       }
-      const engineer = new Engineer(answers.name, answers.role, answers.id, answers.email, answers.github);      //creating engineer object
-      teamMembers.push(engineer);
-      // console.log(teamMembers);
+
 
     })
     .catch(error => {
@@ -72,19 +74,20 @@ function addIntern() {
   inquirer
     .prompt(questions.internQuestions)
     .then(answers => {
+      ////creating engineer object
+      const intern = new Intern(answers.name, answers.role, answers.id, answers.email, answers.school);
+      teamMembers.push(intern);
+      // console.log(teamMembers);
       if (answers.addmore === "Engineer") {
         addEngineer();
       } else if (answers.addmore === "Intern") {
         addIntern();         //recursive function
       } else {
         console.log("No-one else to add!");
-        render(teamMembers);
+        renderTeam();
       }
 
-      ////creating engineer object
-      const intern = new Intern(answers.name, answers.role, answers.id, answers.email, answers.school);
-      teamMembers.push(intern);
-      // console.log(teamMembers);
+
 
     })
     .catch(error => {
@@ -93,7 +96,13 @@ function addIntern() {
     });
 }
 
+function renderTeam() {
+  fs.writeFile(outputPath, render(teamMembers), "utf8", (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  });
 
+}
 
 /* If you want to add more people,
       * if the person is equal to engineer,
