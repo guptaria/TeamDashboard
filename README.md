@@ -84,7 +84,7 @@ Current updated Weather and 5 day Weather Forecast.
 
 
 ## Github_Links
-[**URL of My Github Repository**](https://github.com/guptaria/Weather_Dashboard)<br>
+[**URL of My Github Repository**](https://github.com/guptaria/TeamDashboard)<br>
 [**URL of Deployed Application**](https://guptaria.github.io/Weather_Dashboard/)
 
 
