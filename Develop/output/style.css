@@ -16,3 +16,17 @@
     border: solid;
     border-radius:2px;
 }
+.display-4 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.card-title, h3, h4 {
+    font-family: 'Noto Sans', sans-serif;
+}
+/* 
+.jumbotron {
+    background-image: url("../Assets/Screen Shot 2020-12-12 at 2.04.04 PM.png");
+    background-size: cover;
+    height: 300px;
+  } */
+  

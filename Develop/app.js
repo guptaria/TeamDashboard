@@ -8,15 +8,17 @@ const Intern = require("./lib/Intern");
 
 //Local Modules
 const questions = require("./lib/questions.js");
+const render = require("./lib/htmlRenderer");
 
 
 const path = require("path");
 const fs = require("fs");
 
+//
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const render = require("./lib/htmlRenderer");
+//creating array
 const teamMembers = [];
 
 
@@ -95,7 +97,7 @@ function addIntern() {
 
     });
 }
-
+ // creating render function to make the team html 
 function renderTeam() {
   fs.writeFile(outputPath, render(teamMembers), "utf8", (err) => {
     if (err) throw err;
