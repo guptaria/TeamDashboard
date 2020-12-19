@@ -1,30 +1,42 @@
 // TODO: Write code to define and export the Employee class
 class Employee {
     constructor(name, role, id, email) {
+
+        // if(typeof id !== "number" || isNaN(id)||id<0){
+        //     console.log("erroooorrrrr");
+        //     return this.id;
+        // }
+        // if (!name || !name.trim().length) {
+        //     throw new Error("Expected parameter 'name' to be a non-empty string");
+        // }
+    //     if (typeof id !== "number" || isNaN(id) || id < 0) {
+    //         throw new Error("Expected parameter 'id' to be a non-negative number");
+    //     }
+    //     if (!email || !email.trim().length) {
+    //         throw new Error("Expected parameter 'name' to be a non-empty string");
+    //     }
         this.name = name;
         this.role = role;
         this.id = id;
         this.email = email;
+    }
+getName() {
+    return this.name;
+}
+getRole() {
+    return "Employee";
+}
 
-    }
-    getName() {
-        return this.name;
-    }
-    getRole() {
-        return "Employee";
-    }
+getId() {
+    return this.id;
 
-    getId() {
-        return this.id;
-
-    }
-    getEmail() {
-        return this.email;
-
-    }
+}
+getEmail() {
+    return this.email;
 
 }
 
+}
 
 
 // id array

@@ -20,7 +20,10 @@ const managerQuestions = [
     type: 'input',
     name: 'name',
     message: "What is your manager's name?",
-  },
+    
+    
+    },
+
   {
     type: 'input',
     name: 'role',
@@ -46,6 +49,7 @@ const managerQuestions = [
     message: "What is your manager's officeNumber?",
 
   },
+  
 
   { ...addPeople }
 ];
