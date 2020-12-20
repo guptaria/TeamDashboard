@@ -20,8 +20,16 @@ const managerQuestions = [
     type: 'input',
     name: 'name',
     message: "What is your manager's name?",
-    
-    
+    // validate : answer => {
+    //   const containsNumsSpecial = /\W/g;
+    //   const temp  = answer.match(containsNumsSpecial);   //using regex
+    //   console.log(temp);
+    //   if(answer !== '' && temp === '')    // \W return all special characters ,\d will return all digits from [0-9]
+    //   {
+    //     return true;
+    //   }
+    //     return "Name should be a string and cannot be empty";
+    // }
     },
 
   {
@@ -35,6 +43,29 @@ const managerQuestions = [
     type: 'input',
     name: 'id',
     message: "What is your manager's id?",
+
+    validate: answer =>{
+      // console.log(isNaN);
+      if (isNaN(answer)) {
+        console.log("  invalid number");
+        return false;
+       
+      }
+      return true;
+     
+    }
+
+    // validate : function answer() {
+    //   const containsNums = answer.match(/\d\W+/);   //using regex
+    //   console.log(containsNums);
+    //   if(answer !== '' && containsNums === '')
+    //   {
+    //     // console.log("its working");
+    //     return true;
+    //   }
+    //     return "Name cannot be empty";
+    // }
+    
 
   },
   {

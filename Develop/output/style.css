@@ -1,11 +1,30 @@
-/* giving background color to the document heading */
+/* giving background color to the document heading or giving background image*/
 .jumbotron{
-    background-color:lightseagreen;
+    
+    /* background-image: url("../Assets/laptop.jpg");
+    background-size: cover;
+     background-position: center;
+    height: 300px; */
+}
+
+body{
+    background: seashell;
 }
 /* Giving margin in between the employee cards */
 .card{
     margin:10px;
+    /* min-width:300px;
+    min-height:400px; */
 }
+
+/* .container{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    flex-grow: 100;
+    flex-shrink: 50;
+    text-align: center;
+} */
 /*  */
 .card-header{
     background-color:lightgray;
@@ -23,10 +42,6 @@
 .card-title, h3, h4 {
     font-family: 'Noto Sans', sans-serif;
 }
-/* 
-.jumbotron {
-    background-image: url("../Assets/Screen Shot 2020-12-12 at 2.04.04 PM.png");
-    background-size: cover;
-    height: 300px;
-  } */
+
+  
   

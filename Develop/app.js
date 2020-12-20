@@ -19,7 +19,36 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 //creating array
+// const stylingCss= require('../style.css')
 const teamMembers = [];
+
+
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+// const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+// console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
+// const document = new JSDOM(html).window.document;
+// var h3Tags=[];
+// var coloring = document.getElementsByClassName("card-header");
+// var h3Tags = document.getElementsByTagName("h3");
+
+
+// function colorTheme() {
+//   for (var i = 0; i < h3Tags.length; i++) {
+//     if (h3Tags[i].textContent == "Manager") {
+//       coloring.style.BackgroundColor = "blue";
+//     }
+//     else if(h3Tags[i].textContent == "Engineer"){
+//       coloring.style.BackgroundColor = "orange";
+//     }
+//     else if(h3Tags[i].textContent == "Intern"){
+//       coloring.style.BackgroundColor = "grey";
+//     }
+  
+//   }
+//   }
+
+
 
 
 //inquirer to ask manager info questions
@@ -102,9 +131,14 @@ function renderTeam() {
   fs.writeFile(outputPath, render(teamMembers), "utf8", (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
+    // colorTheme();
   });
 
 }
+
+
+
+
 
 /* If you want to add more people,
       * if the person is equal to engineer,
