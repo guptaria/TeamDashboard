@@ -72,6 +72,61 @@ class Employee {
 module.exports = Employee;
 ```
 
+
+```
+function addEngineer() {
+  inquirer
+    .prompt(questions.engineerQuestions)
+    .then(answers => {
+      const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);      //creating engineer object
+      teamMembers.push(engineer);
+      // console.log(teamMembers);
+      if (answers.addmore === "Engineer") {
+        addEngineer();     //recursive function
+      } else if (answers.addmore === "Intern") {
+        addIntern();
+      } else {
+        console.log("No-one else to add!");
+        renderTeam();
+      }
+
+
+    })
+    .catch(error => {
+      console.log(error);
+
+    });
+
+}
+```
+
+```
+
+const managerQuestions = [
+  {
+    type: 'input',
+    name: 'name',
+    message: "What is your manager's name?",
+    validate: answer => {
+      const containsNumsSpecial = /[^a-zA-Z]/g; // Only allow letters
+      const temp = answer.match(containsNumsSpecial);   //using regex
+
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "Name should be a string and cannot be empty";
+
+      };
+
+      // return false if name contains any special characters or numbers
+      if (temp !== null) {
+        return "Name should not contain special characters or numbers";
+      }
+
+      return true;
+    }
+  },
+  ```
+  
 ## Final_Result
 Testing 
 ![](Assets/screenshotTest.png)
