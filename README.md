@@ -126,7 +126,7 @@ const managerQuestions = [
     }
   },
   ```
-  
+
 ## Final_Result
 Testing 
 ![](Assets/screenshotTest.png)
@@ -138,6 +138,6 @@ Testing
 
 ## Github_Links
 [**URL of My Github Repository**](https://github.com/guptaria/TeamDashboard)<br>
-[**URL of Deployed Application**](https://guptaria.github.io/TeamDashboard/.)
+
 
 
