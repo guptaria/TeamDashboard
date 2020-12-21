@@ -10,8 +10,10 @@ Team Dashboard is a Node CLI application that takes in information about employe
 * [Languages_Used](#Languages_Used)
 * [Code_Snippet](#Code_Snippet)
 * [Final_Result](#Final_Result)
+* [Video_Demo](#Video_Demo)
 * [ResourceReferred](#ResourceReferred)
-* [Github_Links](#Github_Links)
+* [Github_Link](#Github_Link)
+
 
 
 ## Installation
@@ -130,13 +132,17 @@ const managerQuestions = [
 ## Final_Result
 Testing 
 ![](Assets/screenshotTest.png)
+![](Assets/screenshotBrowser.png)
+
+## Video_Demo
+![](https://drive.google.com/file/d/14Q8pHlC8-h4D6Bux6fXQvUejTbpiKrjg/view)
 
 ## ResourceReferred
 [For inquirer](https://www.npmjs.com/package/inquirer) <br>
 [Constructors](https://www.w3schools.com/js/js_object_constructors.asp)<br>
 
 
-## Github_Links
+## Github_Link
 [**URL of My Github Repository**](https://github.com/guptaria/TeamDashboard)<br>
 
 
