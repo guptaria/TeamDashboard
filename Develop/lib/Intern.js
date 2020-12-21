@@ -1,11 +1,18 @@
-// TODO: Write code to define and export the Intern class.  HINT: This class should inherit from Employee.
+// Making class Intern and inheriting the class Employee
 
 const Employee = require("./Employee");
 
 
 class Intern extends Employee {
-    constructor(name, role, id, email, school) {
-        super(name, role, id, email);
+    /**
+   * Create a Intern.
+   * @param {string} name - Name of the Intern
+   * @param {number} id - ID of the Intern
+   * @param {string} email - Email of the Intern
+   * @param {string} school - School of the Intern
+   */
+    constructor(name, id, email, school) {
+        super(name, id, email);
         this.school = school;
     }
     getRole() {
@@ -15,10 +22,5 @@ class Intern extends Employee {
         return this.school;
     }
 }
-
-
-// if school is empty string, throw error
-// check school.length===0
-
 
 module.exports = Intern;

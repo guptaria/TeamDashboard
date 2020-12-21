@@ -20,23 +20,23 @@ const managerQuestions = [
     type: 'input',
     name: 'name',
     message: "What is your manager's name?",
-    // validate : answer => {
-    //   const containsNumsSpecial = /\W/g;
-    //   const temp  = answer.match(containsNumsSpecial);   //using regex
-    //   console.log(temp);
-    //   if(answer !== '' && temp === '')    // \W return all special characters ,\d will return all digits from [0-9]
-    //   {
-    //     return true;
-    //   }
-    //     return "Name should be a string and cannot be empty";
-    // }
-    },
+    validate: answer => {
+      const containsNumsSpecial = /[^a-zA-Z]/g; // Only allow letters
+      const temp = answer.match(containsNumsSpecial);   //using regex
 
-  {
-    type: 'input',
-    name: 'role',
-    message: "What is your manager's role?",
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "Name should be a string and cannot be empty";
 
+      };
+
+      // return false if name contains any special characters or numbers
+      if (temp !== null) {
+        return "Name should not contain special characters or numbers";
+      }
+
+      return true;
+    }
   },
 
   {
@@ -44,44 +44,46 @@ const managerQuestions = [
     name: 'id',
     message: "What is your manager's id?",
 
-    validate: answer =>{
-      // console.log(isNaN);
+    validate: answer => {
       if (isNaN(answer)) {
-        console.log("  invalid number");
-        return false;
-       
+        return "Invalid number";
+
+
       }
       return true;
-     
+
     }
 
-    // validate : function answer() {
-    //   const containsNums = answer.match(/\d\W+/);   //using regex
-    //   console.log(containsNums);
-    //   if(answer !== '' && containsNums === '')
-    //   {
-    //     // console.log("its working");
-    //     return true;
-    //   }
-    //     return "Name cannot be empty";
-    // }
-    
 
   },
   {
     type: 'input',
     name: 'email',
     message: "What is your manager's email?",
+    validate: answer => {
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "Email cannot be empty";
+      }
+      return true;
+    }
 
   },
   {
     type: 'input',
     name: 'officeNumber',
     message: "What is your manager's officeNumber?",
+    validate: answer => {
+      if (isNaN(answer)) {
+        return "Invalid number";
+      }
+      return true;
+
+    }
 
   },
-  
 
+  //getting addPeople object using spread
   { ...addPeople }
 ];
 
@@ -91,32 +93,67 @@ const engineerQuestions = [
     type: 'input',
     name: 'name',
     message: "What is your engineer's name?",
-  },
-  {
-    type: 'input',
-    name: 'role',
-    message: "What is your engineer's role?",
+    validate: answer => {
+      const containsNumsSpecial = /[^a-zA-Z]/g; // Only allow letters
+      const temp = answer.match(containsNumsSpecial);   //using regex
 
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "Name should be a string and cannot be empty";
+
+      };
+
+      // return false if name contains any special characters or numbers
+      if (temp !== null) {
+        return "Name should not contain special characters or numbers";
+
+      }
+
+      return true;
+    }
   },
 
   {
     type: 'input',
     name: 'id',
     message: "What is your engineer's id?",
+    validate: answer => {
+      if (isNaN(answer)) {
+        return "Invalid number";
+
+      }
+      return true;
+
+    }
 
   },
   {
     type: 'input',
     name: 'email',
     message: "What is your engineer's email?",
-
+    validate: answer => {
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "Email cannot be empty";
+      }
+      return true;
+    }
   },
+  
   {
     type: 'input',
     name: 'github',
     message: "What is your engineer's github?",
+    validate: answer => {
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "Github cannot be empty";
+      }
+      return true;
+    }
 
   },
+  //getting addPeople object using spread
   { ...addPeople }
 ];
 
@@ -126,32 +163,66 @@ const internQuestions = [
     type: 'input',
     name: 'name',
     message: "What is your intern's name?",
-  },
-  {
-    type: 'input',
-    name: 'role',
-    message: "What is your intern's role?",
+    validate: answer => {
+      const containsNumsSpecial = /[^a-zA-Z]/g; // Only allow letters
+      const temp = answer.match(containsNumsSpecial);   //using regex
 
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "Name should be a string and cannot be empty";
+
+      };
+
+      // return false if name contains any special characters or numbers
+      if (temp !== null) {
+        return "Name should not contain special characters or numbers";
+      }
+
+      return true;
+    }
   },
+
 
   {
     type: 'input',
     name: 'id',
     message: "What is your intern's id?",
+    validate: answer => {
+      if (isNaN(answer)) {
+        return "Invalid number";
+      }
+      return true;
+
+    }
 
   },
   {
     type: 'input',
     name: 'email',
     message: "What is your intern's email?",
+    validate: answer => {
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "Email cannot be empty";
+      }
+      return true;
+    }
 
   },
   {
     type: 'input',
     name: 'school',
     message: "What is your intern's school?",
+    validate: answer => {
+      // return false if user input is empty
+      if (answer.length === 0) {
+        return "School cannot be empty";
+      }
+      return true;
+    }
 
   },
+  //getting addPeople object using spread
   { ...addPeople }
 ];
 

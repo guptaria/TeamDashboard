@@ -1,11 +1,19 @@
-// TODO: Write code to define and export the Manager class. HINT: This class should inherit from Employee.
+// Making class Manager and inheriting the class Employee
 
 const Employee = require("./Employee");
 
 
 class Manager extends Employee {
-    constructor(name, role, id, email, officeNumber) {
-        super(name, role, id, email);
+    /**
+   * Create a Manager.
+   * @param {string} name - Name of the Manager
+   * @param {number} id - ID of the Manager
+   * @param {string} email - Email of the Manager
+   * @param {number} officeNumber - Office Number of the Manager
+   */
+
+    constructor(name, id, email, officeNumber) {
+        super(name, id, email);
         this.officeNumber = officeNumber;
     }
     getOfficeNumber() {
@@ -16,8 +24,5 @@ class Manager extends Employee {
         return "Manager";
     }
 }
-
-// if office no is negative  number or string, throw error
-
 
 module.exports = Manager;

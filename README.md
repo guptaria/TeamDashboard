@@ -15,7 +15,7 @@ Team Dashboard is a Node CLI application that takes in information about employe
 
 
 ## Installation
-There are a few things that are required for this application. You will need to intsall the following: npm, inquirer, and node. Once these are installed in your CLI you will run the application by entering node AddTeam.js. Follow the prompts until all questions have been answered or you would no longer like to add anymore team members, then open the team.html file that is generated in the output directory.
+There are a few things that are required for this application. You will need to intsall the following: npm, inquirer, and node. Once these are installed in your CLI you will run the application by entering node app.js . Follow the prompts until all questions have been answered or you would no longer like to add anymore team members, then open the team.html file that is generated in the output directory.
 
 ## UserStory
 As a manager <br>
@@ -73,14 +73,12 @@ module.exports = Employee;
 ```
 
 ## Final_Result
-Current updated Weather and 5 day Weather Forecast.
-![](Assets/screenshot1.png)
-
-## Demo_Gif
+Testing 
+![](Assets/screenshotTest.png)
 
 ## ResourceReferred
-[For inquirer] https://www.npmjs.com/package/inquirer <br>
-[GetBootstrap] (https://getbootstrap.com/) - Open-source CSS framework directed at responsive, mobile-first front-end web development.<br>
+[For inquirer](https://www.npmjs.com/package/inquirer) <br>
+[Constructors](https://www.w3schools.com/js/js_object_constructors.asp)<br>
 
 
 ## Github_Links

@@ -1,40 +1,51 @@
-/* giving background color to the document heading or giving background image*/
+/* giving background image*/
 .jumbotron{
-    
-    /* background-image: url("../Assets/laptop.jpg");
+    background-image: url("../../Assets/laptop.jpg");
     background-size: cover;
-     background-position: center;
-    height: 300px; */
+    background-position: center;
+    height: 300px;
 }
-
+/* background color to html page */
 body{
-    background: seashell;
+    background: lightgrey;
 }
 /* Giving margin in between the employee cards */
 .card{
-    margin:10px;
-    /* min-width:300px;
-    min-height:400px; */
+     margin:10px;
+     min-width: 280px;      /*giving minimun height and width to the employee cards */
+     min-height: 320px;
+     box-shadow:20px 20px 10px grey; 
+}
+ /* changing color of text(my team )white and adding some properties on it*/
+.text-center{
+    margin: auto;
+    width: 15%;
+    font-family: cursive;
+    text-shadow: 2px 2px 5px;
+    font-size: 70px;
+    bottom: 40px;
+    right: 30px;
+    color:whitesmoke;
+    position: absolute;
+   
 }
 
-/* .container{
-    display:flex;
+/* changing the property to flex wrap so that it can go to next line */
+.d-flex{
     flex-wrap: wrap;
-    width:100%;
-    flex-grow: 100;
-    flex-shrink: 50;
-    text-align: center;
-} */
-/*  */
-.card-header{
-    background-color:lightgray;
 }
 /* giving border to the employee cards */
 .employee-card{
-    border-color:blue;
-    border: solid;
+    border-color:white;
     border-radius:2px;
+   
 }
+/* easy to read why you hover on the employee card */
+.card :hover
+{
+    font-weight: bolder;   
+}
+/* changing font family */
 .display-4 {
     font-family: 'Work Sans', sans-serif;
 }
@@ -43,5 +54,15 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 
+/* giving color to the class accounding to the position of the employee */
+.card-header.manager {
+    background-color: #99ebff;
+}
+.card-header.engineer {
+    background-color:#ffc299;
+}
+.card-header.intern {
+    background-color: #b3ffb3;
+}
   
   
