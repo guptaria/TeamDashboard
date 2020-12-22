@@ -135,7 +135,7 @@ Testing
 ![](Assets/screenshotBrowser.png)
 
 ## Video_Demo
-![](https://drive.google.com/file/d/14Q8pHlC8-h4D6Bux6fXQvUejTbpiKrjg/view)
+[Click to Watch the Video](https://drive.google.com/file/d/14Q8pHlC8-h4D6Bux6fXQvUejTbpiKrjg/view)
 
 ## ResourceReferred
 [For inquirer](https://www.npmjs.com/package/inquirer) <br>
